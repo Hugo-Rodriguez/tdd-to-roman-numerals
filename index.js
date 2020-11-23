@@ -6,6 +6,16 @@
 export function toRoman(n) {
   let resultado = "";
 
+  if (n >= 1000) {
+    resultado = "MD";
+    n -=  1000; 
+  }
+
+  if (n >= 900) {
+    resultado = "CM";
+    n -= 900; 
+  }
+
   if (n >= 500) {
     resultado = "D";
     n -= 500; 

@@ -26,6 +26,7 @@ describe(('Conversión a números romanos'), () => {
   it('test 138', () => { strictEqual(toRoman(138), "CXXXVIII") });
   it('test 338', () => { strictEqual(toRoman(338), "CCCXXXVIII") });
   it('test 510', () => { strictEqual(toRoman(510), "DX") });
+  it('test 910', () => { strictEqual(toRoman(910), "CMX") });
   
 
   
