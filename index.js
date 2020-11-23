@@ -5,6 +5,43 @@
  */
 export function toRoman(n) {
   let resultado = "";
+
+  if (n >= 500) {
+    resultado = "D";
+    n -= 500; 
+  }
+
+
+  if (n >= 400) {
+    resultado = "CD";
+    n -= 400; 
+  }
+ 
+  while (n >= 100) {
+    resultado += "C";
+    n -= 100; 
+  }
+  
+  if (n >= 90) {
+    resultado = "XC";
+    n -= 90; 
+  }
+
+  
+  if(n >= 50){
+    resultado += 'L';
+    n-=50
+  }
+
+  if (n >= 40) {
+    resultado += "XL";
+    n -= 40;
+  }
+
+  while(n >=10 && n<40){
+    resultado += 'X';
+    n -= 10;
+  }
   
   if (n == 9) {
     resultado = "IX";
@@ -16,7 +53,7 @@ export function toRoman(n) {
 
 
   if (n == 4) {
-    resultado = "IV";
+    resultado += "IV";
     n -= 4;
   } else if (n >= 5) {
     resultado += "V";
