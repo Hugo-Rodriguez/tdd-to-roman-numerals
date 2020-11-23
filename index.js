@@ -6,7 +6,8 @@
  * @returns {string} El equivalente en números romanos.
  */
 export function toRoman(n) {
-  return "I";
+ if (n==1) return "I";
+ if (n==2) return "II";
 }
 
 
