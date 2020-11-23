@@ -7,4 +7,8 @@ describe(('Conversión a números romanos'), () => {
   it('test 3', () => { strictEqual(toRoman(3), "III") });
   it('test 4', () => { strictEqual(toRoman(4), "IV") });
   it('test 5', () => { strictEqual(toRoman(5), "V") });
+  it('test 6', () => { strictEqual(toRoman(6), "VI") });
+  it('test 7', () => { strictEqual(toRoman(7), "VII") });
+  it('test 9', () => { strictEqual(toRoman(9), "IX") });
+  it('test 10', () => { strictEqual(toRoman(10), "X") }); 
 })

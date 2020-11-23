@@ -5,17 +5,27 @@
  */
 export function toRoman(n) {
   let resultado = "";
+  
+  if (n == 9) {
+    resultado = "IX";
+    n -= 9;  
+  } else if (n >= 10) {
+    resultado += "X";
+    n -= 10;  
+  }
+
 
   if (n == 4) {
     resultado = "IV";
-  } else {
-    if (n == 5) {
-      resultado = "V";
-    } else {
-      for (let i = 0; i < n; i++) {
-        resultado += "I";
-      }
-    }
+    n -= 4;
+  } else if (n >= 5) {
+    resultado += "V";
+    n -= 5;
+  }
+
+
+  for (let i = 0; i < n; i++) {
+    resultado += "I";
   }
 
   return resultado;
